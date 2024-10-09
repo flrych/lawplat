@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.yuchenghao</groupId>
+	<artifactId>lawplat-center</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>lawplat-center</name>
+	<description>lawplat-center</description>
+
+	<packaging>pom</packaging>
+	<!-- 父类 -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.3.4</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<!-- 子类 -->
+	<modules>
+		<module>lawplat-api</module>
+		<module>lawplat-web</module>
+		<module>lawplat-dao</module>
+		<module>lawplat-common</module>
+		<module>lawplat-service</module>
+	</modules>
+
+	<properties>
+		<java.version>17</java.version>
+		<hutool.version>5.8.32</hutool.version>
+	</properties>
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
+	<!-- 强依赖 -->
+	<dependencies>
+
+	</dependencies>
+
+	<!-- 弱依赖 -->
+	<dependencyManagement>
+		<dependencies>
+			<!-- 子模块 -->
+			<dependency>
+				<groupId>com.yuchenghao</groupId>
+				<artifactId>lawplat-common</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.yuchenghao</groupId>
+				<artifactId>lawplat-api</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.yuchenghao</groupId>
+				<artifactId>lawplat-service</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.yuchenghao</groupId>
+				<artifactId>lawplat-web</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.yuchenghao</groupId>
+				<artifactId>lawplat-dao</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<!-- lombok 实例化-->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>1.18.34</version>
+			</dependency>
+			<dependency>
+				<groupId>cn.hutool</groupId>
+				<artifactId>hutool-bom</artifactId>
+				<version>${hutool.version}</version>
+				<type>pom</type>
+				<!-- 注意这里是import -->
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+</project>
