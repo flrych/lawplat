@@ -11,45 +11,27 @@
     <artifactId>lawplat-web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>lawplat-web</name>
+    <description>视图层子模块</description>
 
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
-    <properties>
-        <java.version>17</java.version>
-    </properties>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.yuchenghao</groupId>
-            <artifactId>lawplat-service</artifactId>
-        </dependency>
         <dependency>
             <groupId>com.yuchenghao</groupId>
             <artifactId>lawplat-common</artifactId>
         </dependency>
         <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-http</artifactId>
+            <groupId>com.yuchenghao</groupId>
+            <artifactId>lawplat-service</artifactId>
+        </dependency>
+        <!-- 视图解析器 -->
+ <!--       <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <version>${thymeleaf.version}</version>
+        </dependency>-->
+        <!-- pgSql jdbc驱动 -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
         </dependency>
     </dependencies>
     <build>

@@ -27,27 +27,28 @@
 		<module>lawplat-service</module>
 	</modules>
 
+	<!-- 版本管理 -->
 	<properties>
 		<java.version>17</java.version>
+		<common.version>0.0.1-SNAPSHOT</common.version>
+		<api.version>0.0.1-SNAPSHOT</api.version>
+		<web.version>0.0.1-SNAPSHOT</web.version>
+		<service.version>0.0.1-SNAPSHOT</service.version>
+		<dao.version>0.0.1-SNAPSHOT</dao.version>
+		<thymeleaf.version>3.4.0</thymeleaf.version>
+		<boot-web.version>3.4.0</boot-web.version>
+		<spring-boot.version>3.4.0</spring-boot.version>
 		<hutool.version>5.8.32</hutool.version>
+		<lombok.version>1.18.36</lombok.version>
+		<fastjson2.version>2.0.53</fastjson2.version>
+		<thymeleaf.version>3.4.0</thymeleaf.version>
+		<mybatis-plus.version>3.5.9</mybatis-plus.version>
+		<postgresql.version>42.7.4</postgresql.version>
+		<druid.version>1.2.24</druid.version>
 	</properties>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
-	<!-- 强依赖 -->
-	<dependencies>
 
-	</dependencies>
+	<!-- 强依赖 -->
+	<dependencies></dependencies>
 
 	<!-- 弱依赖 -->
 	<dependencyManagement>
@@ -55,43 +56,95 @@
 			<!-- 子模块 -->
 			<dependency>
 				<groupId>com.yuchenghao</groupId>
-				<artifactId>lawplat-common</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
-			</dependency>
-			<dependency>
-				<groupId>com.yuchenghao</groupId>
 				<artifactId>lawplat-api</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
+				<version>${api.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.yuchenghao</groupId>
-				<artifactId>lawplat-service</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
+				<artifactId>lawplat-common</artifactId>
+				<version>${common.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.yuchenghao</groupId>
 				<artifactId>lawplat-web</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
+				<version>${web.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.yuchenghao</groupId>
+				<artifactId>lawplat-service</artifactId>
+				<version>${service.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.yuchenghao</groupId>
 				<artifactId>lawplat-dao</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
+				<version>${dao.version}</version>
 			</dependency>
 
-			<!-- lombok 实例化-->
+			<!-- 生成配置元数据 -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-configuration-processor</artifactId>
+				<version>${spring-boot.version}</version>
+				<optional>true</optional>
+			</dependency>
+			<!-- 对应用系统进行自省和监控的功能 -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-actuator</artifactId>
+			</dependency>
+			<!-- 提供面向切面编程支持 -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-aop</artifactId>
+			</dependency>
+			<!-- lombok 注解实例化-->
 			<dependency>
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
-				<version>1.18.34</version>
+				<version>${lombok.version}</version>
+				<optional>true</optional>
 			</dependency>
+			<!-- 工具集	-->
 			<dependency>
 				<groupId>cn.hutool</groupId>
-				<artifactId>hutool-bom</artifactId>
+				<artifactId>hutool-all</artifactId>
 				<version>${hutool.version}</version>
-				<type>pom</type>
-				<!-- 注意这里是import -->
-				<scope>import</scope>
+			</dependency>
+			<!-- json解析工具 -->
+			<dependency>
+				<groupId>com.alibaba.fastjson2</groupId>
+				<artifactId>fastjson2</artifactId>
+				<version>${fastjson2.version}</version>
+			</dependency>
+			<!-- RESTFul和SpringMVC的支持 -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>${boot-web.version}</version>
+			</dependency>
+			<!-- 视图解析器 -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-thymeleaf</artifactId>
+				<version>${thymeleaf.version}</version>
+			</dependency>
+			<!-- 持久层框架增强版 -->
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>${mybatis-plus.version}</version>
+			</dependency>
+			<!-- pgSql jdbc驱动 -->
+			<dependency>
+				<groupId>org.postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>${postgresql.version}</version>
+			</dependency>
+			<!-- 数据库连接池 -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid-spring-boot-starter</artifactId>
+				<version>${druid.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

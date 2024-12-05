@@ -9,9 +9,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class BusinessServiceImpl extends BaseServiceImpl implements BusinessService {
 
+
+
+
     @Override
     public BusinessVo queryBusinessConsult() {
+         //电话咨询 --> 180****9032
 
+
+
+
+         //留言咨询 -->
 
 
 
