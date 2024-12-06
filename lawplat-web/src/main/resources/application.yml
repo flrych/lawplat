@@ -1,0 +1,24 @@
+server:
+  port: 8080 #
+
+spring:
+  datasource:
+    hikari:
+      jdbc-url: jdbc:postgresql://localhost:5432/postgresql
+      username: postgresql
+      password: '!@#$#@!'
+      driver-class-name: org.postgresql.Driver
+      auto-commit: true
+      minimum-idle: 5
+      maximum-pool-size: 15
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 660000
+
+
+mybatis-plus:
+  configuration:
+    use-actual-param-name: true
+  mapper-locations: classpath:/mapper/**.xml
+
+
