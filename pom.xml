@@ -35,10 +35,7 @@
 		<web.version>0.0.1-SNAPSHOT</web.version>
 		<service.version>0.0.1-SNAPSHOT</service.version>
 		<dao.version>0.0.1-SNAPSHOT</dao.version>
-		<boot-web.version>3.4.0</boot-web.version>
-		<processor.version>3.4.0</processor.version>
 		<hutool.version>5.8.32</hutool.version>
-		<lombok.version>1.18.36</lombok.version>
 		<fastjson2.version>2.0.53</fastjson2.version>
 		<mybatis-plus.version>3.5.9</mybatis-plus.version>
 		<postgresql.version>42.7.4</postgresql.version>
@@ -74,31 +71,6 @@
 				<artifactId>lawplat-dao</artifactId>
 				<version>${dao.version}</version>
 			</dependency>
-
-			<!-- 生成配置元数据 -->
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-configuration-processor</artifactId>
-				<version>${processor.version}</version>
-				<optional>true</optional>
-			</dependency>
-			<!-- 对应用系统进行自省和监控的功能 -->
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-actuator</artifactId>
-			</dependency>
-			<!-- 提供面向切面编程支持 -->
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-aop</artifactId>
-			</dependency>
-			<!-- lombok 注解实例化-->
-			<dependency>
-				<groupId>org.projectlombok</groupId>
-				<artifactId>lombok</artifactId>
-				<version>${lombok.version}</version>
-				<optional>true</optional>
-			</dependency>
 			<!-- 工具集	-->
 			<dependency>
 				<groupId>cn.hutool</groupId>
@@ -111,22 +83,11 @@
 				<artifactId>fastjson2</artifactId>
 				<version>${fastjson2.version}</version>
 			</dependency>
-			<!-- RESTFul和SpringMVC的支持 -->
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-web</artifactId>
-				<version>${boot-web.version}</version>
-			</dependency>
-			<!-- 视图解析器 -->
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-thymeleaf</artifactId>
-				<version>${thymeleaf.version}</version>
-			</dependency>
 			<!-- 持久层框架增强版 -->
 			<dependency>
 				<groupId>com.baomidou</groupId>
 				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>${mybatis-plus.version}</version>
 			</dependency>
 			<!-- pgSql jdbc驱动 -->
 			<dependency>
