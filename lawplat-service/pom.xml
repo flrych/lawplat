@@ -18,6 +18,7 @@
             <groupId>com.yuchenghao</groupId>
             <artifactId>lawplat-common</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.yuchenghao</groupId>
             <artifactId>lawplat-dao</artifactId>
