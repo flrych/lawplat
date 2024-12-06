@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.4</version>
+		<version>3.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -35,13 +35,11 @@
 		<web.version>0.0.1-SNAPSHOT</web.version>
 		<service.version>0.0.1-SNAPSHOT</service.version>
 		<dao.version>0.0.1-SNAPSHOT</dao.version>
-		<thymeleaf.version>3.4.0</thymeleaf.version>
 		<boot-web.version>3.4.0</boot-web.version>
-		<spring-boot.version>3.4.0</spring-boot.version>
+		<processor.version>3.4.0</processor.version>
 		<hutool.version>5.8.32</hutool.version>
 		<lombok.version>1.18.36</lombok.version>
 		<fastjson2.version>2.0.53</fastjson2.version>
-		<thymeleaf.version>3.4.0</thymeleaf.version>
 		<mybatis-plus.version>3.5.9</mybatis-plus.version>
 		<postgresql.version>42.7.4</postgresql.version>
 		<druid.version>1.2.24</druid.version>
@@ -81,7 +79,7 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-configuration-processor</artifactId>
-				<version>${spring-boot.version}</version>
+				<version>${processor.version}</version>
 				<optional>true</optional>
 			</dependency>
 			<!-- 对应用系统进行自省和监控的功能 -->
@@ -129,7 +127,6 @@
 			<dependency>
 				<groupId>com.baomidou</groupId>
 				<artifactId>mybatis-plus-boot-starter</artifactId>
-				<version>${mybatis-plus.version}</version>
 			</dependency>
 			<!-- pgSql jdbc驱动 -->
 			<dependency>

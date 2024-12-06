@@ -23,11 +23,10 @@
             <artifactId>lawplat-service</artifactId>
         </dependency>
         <!-- 视图解析器 -->
- <!--       <dependency>
+       <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-            <version>${thymeleaf.version}</version>
-        </dependency>-->
+        </dependency>
         <!-- pgSql jdbc驱动 -->
         <dependency>
             <groupId>org.postgresql</groupId>
